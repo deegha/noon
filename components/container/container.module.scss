@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  background-color: #f1f2f6;
+
+  margin-bottom: 100px;
+}
+
+
+
+@media screen and (min-width: 800px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+}
