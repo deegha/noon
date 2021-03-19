@@ -74,7 +74,7 @@ const PostsContextProvider =({ children }: PostsProps) => {
     })
 
     setPosts(newSet)
-
+    setFavPosts(newSet.filter((post:IPost) => post.isFavByuser === true))
     const data = {
       postId: postId,
       fav: !currentStatus
@@ -84,6 +84,7 @@ const PostsContextProvider =({ children }: PostsProps) => {
       await makeFavourite(data);
       fetchposts()
     }catch (er) {
+      alert ("We are really sorry we could't perform your operation. Could you re try")
       console.log("Couldn't perform operation",er)
 
       /*** In a production application we would need to inform the user that due to some complication that particular post didnt get liked **/

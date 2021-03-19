@@ -25,7 +25,7 @@ export const Card:React.FC<ICardPorps>  = (props) => {
               <h1 className={styles.postHeading}>{post.postTitle}</h1>
               <h2 className={styles.postPrice}>AED {post.postPrice}</h2>
             </div>
-            <div onClick={() => onClickHeart(post.postId, post.isFavByuser)}>
+            <div onClick={() => onClickHeart(post.postId, post.isFavByuser)} className={styles.like}>
               <FiHeart color={"#c6c5c5"}  fill={post.isFavByuser?"#3d3b3a":"none"} size={32} />
             </div>
           </div>

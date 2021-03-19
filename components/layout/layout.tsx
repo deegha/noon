@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./layout.module.scss"
 import { FiHeart, FiHome } from 'react-icons/fi'
+import { Head } from "../"
 
 import { useRouter } from 'next/router'
 
@@ -12,8 +13,11 @@ export const Layout: React.FC = ({ children }) => {
     router.push(selected)
   }
 
+  const title = router.pathname === "/"? "noon | home" : "noon | favourites"
+
   return (
     <div className={styles.container}>
+      <Head title={title} />
       <div className={styles.header}>
         <h1>noon</h1>
       </div>
